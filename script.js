@@ -147,7 +147,9 @@ window.onload = function(){
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                     maxTicksLimit: 4
                   }
               }],
               yAxes: [{
