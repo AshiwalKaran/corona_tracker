@@ -138,7 +138,10 @@ window.onload = function(){
             labels: {
                 fontColor: "Grey",
                 fontSize: 10
-            }
+            },
+            onClick: function (e) {
+              e.stopPropagation();
+    }
         },
           scales: {
               xAxes: [{
