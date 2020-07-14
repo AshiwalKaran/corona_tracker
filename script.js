@@ -845,20 +845,30 @@ window.onload = function(){
               scales: {
                 xAxes: [{
                   gridLines: {
-                    drawOnChartArea: false
+                    drawOnChartArea: false,
+                    color:#777C78
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                    maxTicksLimit: 5,
+                    maxRotation: 0,
+                    minRotation: 0
                   }
                }],
                   yAxes: [{
                     gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color:#777C78
                     },
                       ticks: {
                         fontColor:"Grey",
-                        beginAtZero: true
+                        beginAtZero: true,
+                         autoSkip: true,
+                         maxTicksLimit: 5,
+                         maxRotation: 0,
+                         minRotation: 0
                       }
                   }]
               }
