@@ -137,7 +137,7 @@ window.onload = function(){
           legend: {
             labels: {
                 fontColor: "Grey",
-                fontSize: 10
+                fontSize: 15
             },
             onClick: function (e) {
               e.stopPropagation();
