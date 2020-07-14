@@ -146,7 +146,8 @@ window.onload = function(){
           scales: {
               xAxes: [{
                   gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color: "#F33E12 " 
                   },
                   ticks: {
                     fontColor:"Grey",
@@ -159,7 +160,10 @@ window.onload = function(){
               }],
               yAxes: [{
                   gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color: "#F33E12 " ,
+                    autoSkip: true,
+                     maxTicksLimit: 5
                   },
                   ticks: {
                     fontColor:"Grey",
