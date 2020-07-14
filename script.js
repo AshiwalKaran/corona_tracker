@@ -152,7 +152,9 @@ window.onload = function(){
                     fontColor:"Grey",
                     beginAtZero: true,
                     autoSkip: true,
-                     maxTicksLimit: 4
+                     maxTicksLimit: 5,
+                    maxRotation: 90,
+                    minRotation: 90
                   }
               }],
               yAxes: [{
