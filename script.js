@@ -154,8 +154,8 @@ window.onload = function(){
                     beginAtZero: true,
                     autoSkip: true,
                      maxTicksLimit: 5,
-                    maxRotation: 90,
-                    minRotation: 90
+                    maxRotation: 0,
+                    minRotation: 0
                   }
               }],
               yAxes: [{
