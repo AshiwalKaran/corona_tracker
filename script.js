@@ -850,7 +850,7 @@ window.onload = function(){
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true,
+                    beginAtZero: true
                    // autoSkip: true,
                    // maxTicksLimit: 5,
                    // maxRotation: 0,
@@ -864,7 +864,7 @@ window.onload = function(){
                     },
                       ticks: {
                         fontColor:"Grey",
-                        beginAtZero: true,
+                        beginAtZero: true
                         // autoSkip: true,
                          //maxTicksLimit: 5,
                          //maxRotation: 0,
