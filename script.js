@@ -851,10 +851,10 @@ window.onload = function(){
                   ticks: {
                     fontColor:"Grey",
                     beginAtZero: true,
-                    autoSkip: true,
-                    maxTicksLimit: 5,
-                    maxRotation: 0,
-                    minRotation: 0
+                   // autoSkip: true,
+                   // maxTicksLimit: 5,
+                   // maxRotation: 0,
+                   // minRotation: 0
                   }
                }],
                   yAxes: [{
@@ -865,10 +865,10 @@ window.onload = function(){
                       ticks: {
                         fontColor:"Grey",
                         beginAtZero: true,
-                         autoSkip: true,
-                         maxTicksLimit: 5,
-                         maxRotation: 0,
-                         minRotation: 0
+                        // autoSkip: true,
+                         //maxTicksLimit: 5,
+                         //maxRotation: 0,
+                         //minRotation: 0
                       }
                   }]
               }
