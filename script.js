@@ -1,48 +1,16 @@
 window.onload = function(){
   //Million
-  function million(num){
-    return (num/1000000).toFixed(0) + 'M';
-  }
-  //KMB
-  function test(costOfIt, visualOfIt) {
-    var visualOfIt = costOfIt.toString();
-
-    var visualLeng = 6;
-    var maxLeng = 4;
-    var letterArrayIndex = 0;
-
-    var letterArray = [" K", " M", " B", " T", " Q"];
-
-    var leng = 4;
-    var slic = 1;
-
-    for (var g = 0; g < visualOfIt.length; g++) {
-        if (visualOfIt.length <= visualLeng) {
-            if (leng < maxLeng) {
-                leng = maxLeng;
-            }
-
-            if (visualOfIt.length === leng) {
-                if (slic > 2) {
-                    visualOfIt = costOfIt.toString().slice(0, slic) + letterArray[letterArrayIndex];
-                    break;
-                } else {
-                    visualOfIt = costOfIt.toString().slice(0, slic) + "," + costOfIt.toString().slice(slic, 3) + letterArray[letterArrayIndex];
-                    break;
-                }
-            } else {
-                leng++;
-                slic++;
-            }
-        } else {
-            maxLeng += 3;
-            visualLeng += 3;
-            letterArrayIndex++;
-        }
+  function numDifferentiation (val) {
+    if (val >= 10000000) {
+      val = (val / 10000000).toFixed(2) + ' Cr';
+    } else if (val >= 100000) {
+      val = (val / 100000).toFixed(2) + ' Lac';
     }
+    else if(val >= 1000) val = (val/1000).toFixed(2) + ' K';
+    return val;
+  }
+ 
 
-    return visualOfIt;
-}
   axios.get('https://covid19.mathdro.id/api')
     .then(res =>{
       document.getElementById("last_update").textContent= "Last update on " + res.data.lastUpdate.split("T")[0] ;
@@ -137,7 +105,7 @@ window.onload = function(){
           legend: {
             labels: {
                 fontColor: "Grey",
-                fontSize: 15
+                fontSize: 13
             },
             onClick: function (e) {
               e.stopPropagation();
@@ -154,8 +122,8 @@ window.onload = function(){
                     beginAtZero: true,
                     autoSkip: true,
                      maxTicksLimit: 5,
-                    maxRotation: 0,
-                    minRotation: 0
+                     maxRotation: 0,
+                     minRotation: 0
                   }
               }],
               yAxes: [{
@@ -163,13 +131,11 @@ window.onload = function(){
                       drawOnChartArea: false,
                       color: "#F33E12 "
                     
-                    
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true,
-                    autoSkip: true,
-                    maxTicksLimit: 5
+                    beginAtZero: true
+                    
                   }
               }]
           }
@@ -193,36 +159,35 @@ window.onload = function(){
           legend: {
             labels: {
                 fontColor: "Grey",
-                fontSize: 15
+                fontSize: 13
             },
             onClick: function (e) {
               e.stopPropagation();
+    }
         },
           scales: {
               xAxes: [{
                   gridLines: {
                       drawOnChartArea: false,
-                      color: "#09055F  "
+                      color:"#096DF4"
                   },
                   ticks: {
                     fontColor:"Grey",
                     beginAtZero: true,
                     autoSkip: true,
                      maxTicksLimit: 5,
-                    maxRotation: 0,
-                    minRotation: 0
+                     maxRotation: 0,
+                     minRotation: 0
                   }
               }],
               yAxes: [{
                   gridLines: {
                       drawOnChartArea: false,
-                      color: "#09055F  "
+                      color:"#096DF4"
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true,
-                    autoSkip: true,
-                    maxTicksLimit: 5
+                    beginAtZero: true
                   }
               }]
           }
@@ -246,36 +211,35 @@ window.onload = function(){
           legend: {
             labels: {
                 fontColor: "Grey",
-                fontSize: 15
+                fontSize: 13
             },
             onClick: function (e) {
               e.stopPropagation();
+    }
         },
           scales: {
               xAxes: [{
                   gridLines: {
                       drawOnChartArea: false,
-                      color: "#2DBC52 "
+                      color:'#2DE122'
                   },
                   ticks: {
                     fontColor:"Grey",
                     beginAtZero: true,
                     autoSkip: true,
                      maxTicksLimit: 5,
-                    maxRotation: 0,
-                    minRotation: 0
+                     maxRotation: 0,
+                     minRotation: 0
                   }
               }],
               yAxes: [{
                   gridLines: {
                       drawOnChartArea: false,
-                      color: "#2DBC52  "
+                      color:'#2DE122'
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true,
-                    autoSkip: true,
-                    maxTicksLimit: 5
+                    beginAtZero: true
                   }
               }]
           }
@@ -299,36 +263,35 @@ window.onload = function(){
           legend: {
             labels: {
                 fontColor: "Grey",
-                fontSize: 15
+                fontSize: 13
             },
             onClick: function (e) {
               e.stopPropagation();
+    }
         },
           scales: {
               xAxes: [{
                   gridLines: {
                       drawOnChartArea: false,
-                      color: "#777877 "
+                      color:'#777877'
                   },
                   ticks: {
                     fontColor:"Grey",
                     beginAtZero: true,
                     autoSkip: true,
-                    maxTicksLimit: 5,
-                    maxRotation: 0,
-                    minRotation: 0
+                     maxTicksLimit: 5,
+                     maxRotation: 0,
+                     minRotation: 0
                   }
               }],
               yAxes: [{
                   gridLines: {
                       drawOnChartArea: false,
-                      color: "#777877"
+                      color:'#777877'
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true,
-                    autoSkip: true,
-                    maxTicksLimit: 5
+                    beginAtZero: true
                   }
               }]
           }
@@ -352,36 +315,36 @@ window.onload = function(){
           legend: {
             labels: {
                 fontColor: "Grey",
-                fontSize: 15
+                fontSize: 13
             },
             onClick: function (e) {
               e.stopPropagation();
+    }
         },
           scales: {
               xAxes: [{
                   gridLines: {
                       drawOnChartArea: false,
-                      color: "#7D3AE5 "
+                      color:'#7D3AE5'
                   },
                   ticks: {
                     fontColor:"Grey",
                     beginAtZero: true,
                     autoSkip: true,
-                    maxTicksLimit: 5,
-                    maxRotation: 0,
-                    minRotation: 0
+                     maxTicksLimit: 5,
+                     maxRotation: 0,
+                     minRotation: 0
                   }
               }],
               yAxes: [{
                   gridLines: {
                       drawOnChartArea: false,
-                      color: "#7D3AE5 "
+                      color:'#7D3AE5'
                   },
                   ticks: {
                     fontColor:"Grey",
                     beginAtZero: true,
-                    autoSkip: true,
-                    maxTicksLimit: 5
+                    
                   }
               }]
           }
@@ -841,34 +804,27 @@ window.onload = function(){
             },
             onClick: function (e) {
               e.stopPropagation();
+    }
         },
               scales: {
                 xAxes: [{
                   gridLines: {
                     drawOnChartArea: false,
-                    color:#777C78
+                    color:"#777C78"
                   },
                   ticks: {
                     fontColor:"Grey",
                     beginAtZero: true
-                   // autoSkip: true,
-                   // maxTicksLimit: 5,
-                   // maxRotation: 0,
-                   // minRotation: 0
                   }
                }],
                   yAxes: [{
                     gridLines: {
                       drawOnChartArea: false,
-                      color:#777C78
+                      color:"#777C78"
                     },
                       ticks: {
                         fontColor:"Grey",
                         beginAtZero: true
-                        // autoSkip: true,
-                         //maxTicksLimit: 5,
-                         //maxRotation: 0,
-                         //minRotation: 0
                       }
                   }]
               }
