@@ -161,13 +161,15 @@ window.onload = function(){
               yAxes: [{
                   gridLines: {
                       drawOnChartArea: false,
-                      color: "#F33E12 " ,
-                    autoSkip: true,
-                     maxTicksLimit: 5
+                      color: "#F33E12 "
+                    
+                    
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                    maxTicksLimit: 5
                   }
               }]
           }
@@ -191,26 +193,36 @@ window.onload = function(){
           legend: {
             labels: {
                 fontColor: "Grey",
-                fontSize: 10
-            }
+                fontSize: 15
+            },
+            onClick: function (e) {
+              e.stopPropagation();
         },
           scales: {
               xAxes: [{
                   gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color: "#09055F  "
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                     maxTicksLimit: 5,
+                    maxRotation: 0,
+                    minRotation: 0
                   }
               }],
               yAxes: [{
                   gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color: "#09055F  "
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                    maxTicksLimit: 5
                   }
               }]
           }
@@ -234,26 +246,36 @@ window.onload = function(){
           legend: {
             labels: {
                 fontColor: "Grey",
-                fontSize: 10
-            }
+                fontSize: 15
+            },
+            onClick: function (e) {
+              e.stopPropagation();
         },
           scales: {
               xAxes: [{
                   gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color: "#2DBC52 "
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                     maxTicksLimit: 5,
+                    maxRotation: 0,
+                    minRotation: 0
                   }
               }],
               yAxes: [{
                   gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color: "#2DBC52  "
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                    maxTicksLimit: 5
                   }
               }]
           }
@@ -277,26 +299,36 @@ window.onload = function(){
           legend: {
             labels: {
                 fontColor: "Grey",
-                fontSize: 10
-            }
+                fontSize: 15
+            },
+            onClick: function (e) {
+              e.stopPropagation();
         },
           scales: {
               xAxes: [{
                   gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color: "#777877 "
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                    maxTicksLimit: 5,
+                    maxRotation: 0,
+                    minRotation: 0
                   }
               }],
               yAxes: [{
                   gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color: "#777877"
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                    maxTicksLimit: 5
                   }
               }]
           }
@@ -320,26 +352,36 @@ window.onload = function(){
           legend: {
             labels: {
                 fontColor: "Grey",
-                fontSize: 10
-            }
+                fontSize: 15
+            },
+            onClick: function (e) {
+              e.stopPropagation();
         },
           scales: {
               xAxes: [{
                   gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color: "#7D3AE5 "
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                    maxTicksLimit: 5,
+                    maxRotation: 0,
+                    minRotation: 0
                   }
               }],
               yAxes: [{
                   gridLines: {
-                      drawOnChartArea: false
+                      drawOnChartArea: false,
+                      color: "#7D3AE5 "
                   },
                   ticks: {
                     fontColor:"Grey",
-                    beginAtZero: true
+                    beginAtZero: true,
+                    autoSkip: true,
+                    maxTicksLimit: 5
                   }
               }]
           }
@@ -796,7 +838,9 @@ window.onload = function(){
             labels: {
                 fontColor: "Grey",
                 fontSize: 25
-            }
+            },
+            onClick: function (e) {
+              e.stopPropagation();
         },
               scales: {
                 xAxes: [{
