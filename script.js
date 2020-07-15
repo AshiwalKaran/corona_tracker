@@ -872,7 +872,7 @@ window.onload = function(){
 
             //myChart.data.labels.push(label);
             myChart.data.datasets[0].label = object.name; 
-            myChart.data.datasets[0].data = [object.infected,object.recovered,object.deaths, object.active];
+            myChart.data.datasets[0].data = [object.infected,object.active,object.recovered, object.deaths];
             myChart.update();
           })
           .catch(err =>{
@@ -956,7 +956,7 @@ window.onload = function(){
             
             //  makeChart(object);
             myChart.data.datasets[0].label = object.name; 
-            myChart.data.datasets[0].data = [object.infected,object.recovered,object.deaths, object.active];
+            myChart.data.datasets[0].data = [object.infected,object.active,object.recovered, object.deaths];
             myChart.update();
           })
           .catch(err =>{
