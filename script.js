@@ -1,10 +1,10 @@
 window.onload = function(){
   //Million
-  function numDifferentiation (val) {
+  function test (val) {
     if (val >= 10000000) {
       val = (val / 10000000).toFixed(2) + ' Cr';
     } else if (val >= 100000) {
-      val = (val / 100000).toFixed(2) + ' Lac';
+      val = (val / 100000).toFixed(2) + ' Lakh';
     }
     else if(val >= 1000) val = (val/1000).toFixed(2) + ' K';
     return val;
@@ -39,12 +39,16 @@ window.onload = function(){
     //let d=test(res.data.deaths.value,0);
     
    // let k=test(a,0);
-    
+      let a=0,b=0,c=0,d=0;
+      a=test(res.data.confirmed.value);
+      b=test(res.data.recovered.value);
+      c=test(res.data.deaths.value);
+      d=test(res.data.confirmed.value-res.data.recovered.value-res.data.deaths.value);
 
-      document.getElementById("infected").textContent=res.data.confirmed.value;
-      document.getElementById("recovered").textContent=res.data.recovered.value;
-      document.getElementById("deaths").textContent=res.data.deaths.value;
-      document.getElementById("active").textContent=res.data.confirmed.value-res.data.recovered.value-res.data.deaths.value;
+      document.getElementById("infected").textContent=a;
+      document.getElementById("recovered").textContent=b;
+      document.getElementById("deaths").textContent=c;
+      document.getElementById("active").textContent=d;
     
       
 
@@ -57,7 +61,7 @@ window.onload = function(){
       };
 
       
-
+      
       makeChart(object);
     })
     .catch(err =>{
@@ -838,11 +842,19 @@ window.onload = function(){
         axios.get('https://covid19.mathdro.id/api')
           .then(res =>{
 
+            //crore
+            let p=0,q=0,r=0,s=0;
+            p=test(res.data.confirmed.value);
+            q=test(res.data.recovered.value);
+            r=test(res.data.deaths.value);
+            s=test(res.data.confirmed.value-res.data.recovered.value-res.data.deaths.value);
+            
+
             document.getElementById("last_update").textContent= "Last update on " + res.data.lastUpdate.split("T")[0] ;
-            document.getElementById("infected").textContent=res.data.confirmed.value;
-            document.getElementById("recovered").textContent=res.data.recovered.value;
-            document.getElementById("deaths").textContent=res.data.deaths.value;
-            document.getElementById("active").textContent=res.data.confirmed.value-res.data.recovered.value-res.data.deaths.value;
+            document.getElementById("infected").textContent=p;
+            document.getElementById("recovered").textContent=q;
+            document.getElementById("deaths").textContent=r;
+            document.getElementById("active").textContent=s;
 
             document.getElementById('increased-infected').innerHTML = "";
             document.getElementById('decreased-recovered').innerHTML = "";
@@ -881,11 +893,21 @@ window.onload = function(){
         axios.get('https://covid19.mathdro.id/api/countries/'+event.target.value)
           .then(res=>{
             //console.log(res)
+
+            //crore
+
+            //crore
+            let p=0,q=0,r=0,s=0;
+            p=test(res.data.confirmed.value);
+            q=test(res.data.recovered.value);
+            r=test(res.data.deaths.value);
+            s=test(res.data.confirmed.value-res.data.recovered.value-res.data.deaths.value);
+
             document.getElementById("last_update").textContent="Last update on " + res.data.lastUpdate.split("T")[0];
-            document.getElementById("infected").textContent=res.data.confirmed.value;
-            document.getElementById("recovered").textContent=res.data.recovered.value;
-            document.getElementById("deaths").textContent=res.data.deaths.value;
-            document.getElementById("active").textContent=res.data.confirmed.value-res.data.recovered.value-res.data.deaths.value;
+            document.getElementById("infected").textContent=p;
+            document.getElementById("recovered").textContent=q;
+            document.getElementById("deaths").textContent=r;
+            document.getElementById("active").textContent=s;
             //console.log(res.config.url.split("/")[5])
             let object = {
               infected:res.data.confirmed.value,
