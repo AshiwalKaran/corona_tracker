@@ -1,7 +1,7 @@
 {
     "name": "Corona Tracker",
     "short_name": "Corona Tracker",
-    "start_url": "/corona_tracker/",
+    "start_url": "/corona_tracker",
     "display": "standalone",
     "background_color": "white",
     "theme_color": "white",
