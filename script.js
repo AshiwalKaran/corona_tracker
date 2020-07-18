@@ -624,10 +624,16 @@ window.onload = function(){
             }
             
           }
-          document.getElementById('increasedIndiaConfirmed').innerHTML += sum1;
+        //new confirm
+          let act=IndiaData[0].deltaconfirmed-IndiaData[0].deltarecovered-IndiaData[0].deltadeaths;
+          document.getElementById('increasedIndiaConfirmed').innerHTML += IndiaData[0].deltaconfirmed;
+          document.getElementById('increasedIndiaActive').innerHTML += act;
+          document.getElementById('increasedIndiaRecovered').innerHTML += IndiaData[0].deltarecovered;
+          document.getElementById('increasedIndiaDeceased').innerHTML += IndiaData[0].deltadeaths; 
+        /*  document.getElementById('increasedIndiaConfirmed').innerHTML += sum1;
           document.getElementById('increasedIndiaActive').innerHTML += sum4;
           document.getElementById('increasedIndiaRecovered').innerHTML += sum2;
-          document.getElementById('increasedIndiaDeceased').innerHTML += sum3; 
+          document.getElementById('increasedIndiaDeceased').innerHTML += sum3; */
         })
         .catch(err =>{
           console.log(err)
