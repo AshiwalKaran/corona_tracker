@@ -366,6 +366,7 @@ window.onload = function(){
           async:false,
           success:function(res){
             IndiaData = res.statewise;
+            Indiaa=res.cases_time_series;
           }
         })
         api2();
@@ -625,11 +626,12 @@ window.onload = function(){
             
           }
         //new confirm
-          let act=IndiaData[0].deltaconfirmed-IndiaData[0].deltarecovered-IndiaData[0].deltadeaths;
-          document.getElementById('increasedIndiaConfirmed').innerHTML += IndiaData[0].deltaconfirmed;
+        document.getElementById('updatedon').innerHTML += Indiaa[Indiaa.length-1].date;
+          let act=Indiaa[Indiaa.length-1].dailyconfirmed-Indiaa[Indiaa.length-1].dailyrecovered-Indiaa[Indiaa.length-1].dailydeceased;
+          document.getElementById('increasedIndiaConfirmed').innerHTML += Indiaa[Indiaa.length-1].dailyconfirmed;
           document.getElementById('increasedIndiaActive').innerHTML += act;
-          document.getElementById('increasedIndiaRecovered').innerHTML += IndiaData[0].deltarecovered;
-          document.getElementById('increasedIndiaDeceased').innerHTML += IndiaData[0].deltadeaths; 
+          document.getElementById('increasedIndiaRecovered').innerHTML += Indiaa[Indiaa.length-1].dailyrecovered;
+          document.getElementById('increasedIndiaDeceased').innerHTML += Indiaa[Indiaa.length-1].dailydeceased; 
         /*  document.getElementById('increasedIndiaConfirmed').innerHTML += sum1;
           document.getElementById('increasedIndiaActive').innerHTML += sum4;
           document.getElementById('increasedIndiaRecovered').innerHTML += sum2;
